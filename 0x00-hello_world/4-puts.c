@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * main
- *return 0
+ *main: main function
+ *description: gets output with put function
+ *Return: 0
  */
 int main(void)
 {

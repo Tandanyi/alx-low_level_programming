@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-
 int main(void)
 	{
  /*declare variable */ 

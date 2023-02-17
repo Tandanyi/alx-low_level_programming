@@ -16,20 +16,19 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int mod = n % 10;
 
 	/* your code goes there */
-	if (mod > 5 && !0)
+	if (n %10 > 5 && !0)
 	{
-		printf("%s %d is %d and is greater than 5 \n", s, n, mod);
+		printf("%s %d is %d and is greater than 5 \n", s, n, n % 10);
 	}
 	else if (mod < 6 && !0)
 	{
-		printf("%s %d is %d and is less than 6  and not 0\n", s, n, mod);
+		printf("%s %d is %d and is less than 6  and not 0\n", s, n,n % 10);
 	}
 	else if (mod == 0)
 	{
-		printf("%s %d is %d and is 0\n", s, n, mod);
+		printf("%s %d is %d and is 0\n", s, n, n % 10);
 	}
 	return (0);
 }

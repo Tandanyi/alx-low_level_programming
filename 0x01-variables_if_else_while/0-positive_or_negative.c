@@ -4,8 +4,7 @@
 
 /**
  *main - determines if random var is positive or negative
- *Description : genate a random number that will be determined if it is positive or negative
-
+ *Description:gets random var and see if is is -tve or +tve 
  *Return : 0
  */
 
@@ -16,7 +15,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/*if var is positive print positive else negative*/
-	if (n >= 0)
+	if (n > 0)
 		{printf("%d is positive\n", n);
 		}
 		else if (n == 0)

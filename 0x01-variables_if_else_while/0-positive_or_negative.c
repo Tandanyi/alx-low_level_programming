@@ -4,8 +4,8 @@
 
 /**
  *main - determines if random var is positive or negative
- *Description:gets random var and see if is is -tve or +tve 
- *Return : 0
+ *Description:gets random var and see if is is -tve or +tve
+ *Return: 0
  */
 
 int main(void)

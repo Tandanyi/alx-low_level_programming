@@ -12,11 +12,12 @@
 int main(void)
 {
 	int n;
-	int mod = n % 10;
 	char *s = "Last digit of";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	int mod = n % 10;
+
 	/* your code goes there */
 	if (mod > 5 && !0)
 	{

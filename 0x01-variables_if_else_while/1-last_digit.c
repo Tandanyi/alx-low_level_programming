@@ -24,7 +24,7 @@ int main(void)
 	}
 	else if (n % 10 == 0)
         {
-		printf("%s %d is %d and is 0\n", s, n, n % 10)
+		printf("%s %d is %d and is 0\n", s, n, n % 10);
 	}
 	else if (n % 10 < 6 && !0)
 	{

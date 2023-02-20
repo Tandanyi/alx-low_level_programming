@@ -15,13 +15,16 @@ int main(void)
 		{
 			for (n3 = '2'; n3 <= '9'; n3++)
 			{
-				putchar(n);
-				putchar(n2);
-				putchar(n3);
-				if (n != '8' || n2 != '9')
+				if (n3 > n2 && n2 > n)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(n);
+					putchar(n2);
+					putchar(n3);
+					if (n != '8' || n2 != '9')
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}

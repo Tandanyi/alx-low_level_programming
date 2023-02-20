@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int n,n2;
+	int n, n2;
 
 	for (n = '0'; n <= '9'; n++)
 	{
@@ -17,7 +17,7 @@ int main(void)
 			{
 				putchar(n);
 				putchar(n2);
-				if (n !='9' || n2 !='10')
+				if (n != '9' || n2 != '10')
 				{
 					putchar(',');
 					putchar(' ');
@@ -26,5 +26,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }

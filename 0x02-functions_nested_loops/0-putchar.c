@@ -1,15 +1,15 @@
 #include <stdio.h>
+#include <main.h>
 
 /**
  * main - prints _putchar
- * Description :declares a string
+ * Description :calls function printstring
  * prints "_putchar"
  * Return: 0
  */
+
 int main(void)
 {
-	char *str = "_putchar";
-
-	printf("%s\n", str);
+	printstring();
 	return (0);
 }

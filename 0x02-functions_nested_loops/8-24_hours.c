@@ -4,17 +4,36 @@
  * jack_bauer - prints the minutes of the day
  * Description: prints the time of the day
  */
-
 void jack_bauer(void)
-{	int h, m;
+{
+	int x = 0;
+	int a = 0, b = 0, c = 0, d = 0;
 
-	for (h = '0'; h < '24'; h++)
+	while (x < 1440)
 	{
-		for (m = '0'; m < '60'; m++)
-		{
-			_putchar((h) + '0');
-			_putchar((m) + '0');
-			_putchar('\n');
-		}
+		_putchar(a + '0');
+		_putchar(b + '0');
+		_putchar(':');
+		_putchar(c + '0');
+		_putchar(d + '0');
+		_putchar('\n');
+
+		d++;
+			if (d > 9)
+			{
+				d = 0;
+				c++;
+			}
+				if (c > 5)
+				{
+					c = 0;
+					b++;
+				}
+					if (b > 9)
+					{
+						b = 0;
+						a++;
+					}
+		x++;
 	}
 }

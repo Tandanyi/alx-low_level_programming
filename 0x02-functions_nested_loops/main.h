@@ -1,4 +1,4 @@
-#include <stdio.h>
+iiii#include <stdio.h>
 /**
  * printstring - prints _putchar
  * Description :declares a string

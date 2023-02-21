@@ -3,6 +3,7 @@
 /**
  * printstring- function prototype
  * Description: function prototype of main.h function
+ * Return: 0
  */
 int printstring(void);
 
@@ -23,6 +24,7 @@ int main(void)
  * printstring - prints _putchar
  * Description :declares a string
  * prints "_putchar"
+ *
  * Return: 0
  */
 

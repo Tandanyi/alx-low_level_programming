@@ -35,8 +35,8 @@ int printstring(void)
 
 	for (size = 0; str[size] != '\0'; size++)
 	{
-		putchar(str[size]);
+		_putchar(str[size] + '0');
 	}
-		putchar('\n');
+		_putchar('\n');
 		return (0);
 }

@@ -18,6 +18,7 @@ int main(void)
 	printstring();
 	return (0);
 }
+
 /**
  * printstring - prints _putchar
  * Description :declares a string

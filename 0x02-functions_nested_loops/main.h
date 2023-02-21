@@ -10,7 +10,7 @@ int printstring(void)
 	char str[] = "_putchar";
 	int size;
 
-	for (int size = '0'; str[size] != 0 ; size ++)
+	for (size = '0'; str[size] != 0 ; size ++)
 	{
 		putchar(str[size]);
 	}

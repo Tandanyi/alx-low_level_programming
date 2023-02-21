@@ -2,7 +2,7 @@
 
 /**
  * _abs -gets absolute value
- * @int: input value
+ * @n: input value
  *
  * Description: changes a number to its abolute value
  * Return: int
@@ -16,7 +16,7 @@ int _abs(int n)
 	}
 	else
 	{
-		n + (-2 * n);
+		n = n + (-2 * n);
 		return (n);
 	}
 }

@@ -8,15 +8,15 @@
  * Return: int
  */
 
-int _abs(int)
+int _abs(int n)
 {
-	if (int >= 0)
+	if (n >= 0)
 	{
-		return (int);
+		return (n);
 	}
 	else
 	{
-		int + (-2 * int);
-		return (int);
+		n + (-2 * n);
+		return (n);
 	}
 }

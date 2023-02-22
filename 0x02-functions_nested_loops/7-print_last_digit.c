@@ -5,7 +5,7 @@
  * @n: input value
  *
  * Description: prints the last digit of a number
- * Return: new n
+ * Return: new o
  */
 
 int print_last_digit(int n)
@@ -23,5 +23,5 @@ int print_last_digit(int n)
 		o = n % 10;
 		_putchar(o + '0');
 		return (o);
-
+	}
 }

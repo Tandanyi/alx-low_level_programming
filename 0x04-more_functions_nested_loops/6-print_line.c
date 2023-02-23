@@ -19,7 +19,7 @@ void print_line(int n)
 		{
 			break;
 		}
-		_putchar('-');
+		_putchar(95);
 	}
 	_putchar('\n');
 }

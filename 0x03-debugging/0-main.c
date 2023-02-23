@@ -13,11 +13,11 @@ int main(void)
 	int i = 0;
 
 	r = positive_or_negative(i);
-	if (r == '0 is zero')
+	if (r == "0 is zero")
 	{
 		return (0);
 	}
-	else if (r != '0 is zero')
+	else if (r != "0 is zero")
 	{
 		return (1);
 	}

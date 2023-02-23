@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_more_numbers - prints 0 - 14
+ * more_numbers - prints 0 - 14
  * Description- prints 0 -14 10 times
  * Return: nothing
  */
 
-void print_more_numbers(void)
+void more_numbers(void)
 {
 	int i;
 	int j;

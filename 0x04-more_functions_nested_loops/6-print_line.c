@@ -2,7 +2,7 @@
 
 /**
  * print_line - prints a line
- * @n- input length
+ * @n: input length
  *
  * Description: prints a line according to n value
  * if n is 0 print only new line
@@ -12,8 +12,8 @@
 void print_line(int n)
 {
 	int m;
-	
-	for(m = 1; m >= n; m++)
+
+	for(m = 0; m < n; m++)
 	{
 		if( n == 0)
 		{

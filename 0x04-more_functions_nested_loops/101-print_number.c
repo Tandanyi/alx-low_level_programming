@@ -9,38 +9,19 @@
 
 void print_number(int n)
 {
-	long m;
-	int c;
-	long num;
+unsigned int k = n;
 
-	num = n;
-	if (num < 0)
+	if (n < 0)
 	{
-		num *= -1;
+		n *= -1;
+		k = n;
 		_putchar('-');
 	}
 
-	m = 1;
-	c = 1;
-	while (c)
-	{
-		if (num / (m * 10) > 0)
-			m *= 10;
-		else
-			c = 0;
-	}
+	k /= 10;
 
-	while (num >= 0)
-	{
-		if (m == 1)
-		{
-			_putchar(num % 10 + '0');
-			num = -1;
-		}
-		else
-		{
-			_putchar((num / m % 10) + '0');
-			m /= 10;
-		}
-	}
+	if (k != 0)
+		print_number(k);
+
+	_putchar((unsigned int) n % 10 + '0');	
 }

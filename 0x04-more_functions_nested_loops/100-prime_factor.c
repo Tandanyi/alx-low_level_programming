@@ -1,46 +1,26 @@
-#include "main.h"
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main -prints an integer.
- * @n: input number
+ * Return: 0
  */
 
-void main(int n)
+int main(void)
 {
-	long m;
-	int c;
-	long num;
+	long x, maxf;
+	long number = 612852475143;
+	double square = sqrt(number);
 
-	num = n;
-
-	if (num < 0)
+	for (x = 1; x <= square; x++)
 	{
-		num *= -1;
-		putchar('-');
-	}
-
-	m = 1;
-	c = 1;
-	while (c)
-	{
-		if (num / (m * 10) > 0)
-			m *= 10;
-		else
-			c = 0;
-	}
-
-	while (num >= 0)
-	{
-		if (m == 1)
+		if (number % x == 0)
 		{
-			putchar(num % 10 + '0');
-			num = -1;
-		}
-		else
-		{
-			putchar((num / m % 10) + '0');
-			m /= 10;
+			maxf = number / x;
 		}
 	}
+
+	printf("%ld\n", maxf);
+
+	return (0);
 }

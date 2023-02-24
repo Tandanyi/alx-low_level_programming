@@ -1,21 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_number -prints an integer.
+ * main -prints an integer.
  * @n: input number
  */
 
-void print_number(int n)
+void main(int n)
 {
 	long m;
 	int c;
 	long num;
+
 	num = n;
 
 	if (num < 0)
 	{
 		num *= -1;
-		_putchar('-');
+		putchar('-');
 	}
 
 	m = 1;
@@ -32,12 +34,12 @@ void print_number(int n)
 	{
 		if (m == 1)
 		{
-			_putchar(num % 10 + '0');
+			putchar(num % 10 + '0');
 			num = -1;
 		}
 		else
 		{
-			_putchar((num / m % 10) + '0');
+			putchar((num / m % 10) + '0');
 			m /= 10;
 		}
 	}

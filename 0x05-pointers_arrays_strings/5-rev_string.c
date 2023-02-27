@@ -8,24 +8,31 @@
 
 void rev_string(char *s)
 {
-	int k, i, j;
-	char *str, temp;
+	int i,j;
+	char k;
 
-	while (k >= 0)
-	{
-		if (s[k] == '\0')
-			break;
-		k++;
+	for (i = 0, j = _strlen(s) - 1; i<j; i++, j--) {
+		k = s[i];
+		s[i] = s[j];
+		s[j] = k;
 	}
-	str = s;
 
-	for (i = 0; i < (k - 1); i++)
+}
+
+/**
+ * _strlen - looks for the size of a string
+ * @s: string
+ *Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	int l;
+
+	l = 0;
+	while (s[l] != '\0')
 	{
-		for (j = i + 1; j > 0; j--)
-		{
-			temp = *(str + j);
-			*(str + j) = *(str + (j - 1));
-			*(str + (j - 1)) = temp;
-		}
+		l++;
 	}
+	return (l);
 }

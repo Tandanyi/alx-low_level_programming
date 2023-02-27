@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts2- prints string
+ * puts2- prints string
  * @str: string literal
  * Return: nothing
  */
 
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int l;
 
@@ -14,7 +14,7 @@ void _puts2(char *str)
 	{
 		if(l % 2 == 0)
 		{
-		_putchar(str[l]);
+			_putchar(str[l]);
 		}
 		else
 		{

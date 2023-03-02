@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * _strcat - adds a string to another string
+ * _strncat - adds a string to another string
  * @dest: destination
  * @src: source of string
+ * @n: number of bytes
  * Return: dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src, int n)
 {
 	int i;
 	int j;
@@ -21,7 +22,10 @@ char *_strcat(char *dest, char *src)
 	{
 		dest[i] = src[j];
 		i++;
+		if (i == n)
+		{
+			break;
+		}
 	}
-	dest[i] = '\0';
 	return (dest);
 }

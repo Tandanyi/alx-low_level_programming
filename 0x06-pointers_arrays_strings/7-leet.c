@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * leet - encode a string
- * @s: string
- * Return: encoded string `s`
+ * leet - encode a sing
+ * @s: sing
+ * Return: encoded sing `s`
  */
 
 char *leet(char *s)
@@ -12,13 +12,13 @@ char *leet(char *s)
 	int j;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	while (str[i])
+	while (s[i])
 	{
 		for (j = 0; j <= 7; j++)
 		{
-			if (str[i] == leet[j] || str[i] - 32 == leet[j])
+			if (s[i] == leet[j] || s[i] - 32 == leet[j])
 			{
-				str[i] = j + '0';
+				s[i] = j + '0';
 		
 			}
 		}
@@ -26,5 +26,5 @@ char *leet(char *s)
 		i++;
 	}
 
-	return (str);
+	return (s);
 }

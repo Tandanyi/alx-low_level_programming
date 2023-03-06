@@ -8,31 +8,29 @@
  * Returns: pointer haystack if string is found
  * 	null if not found
  */
-
 char *_strstr(char *haystack, char *needle)
+{
+	char *occurance, *tempNeedle;
 
-	int i;
-
-	if (*needle == 0)
-		return (haystack);
-
+	if (!*needle)		return (haystack);
 	while (*haystack)
 	{
-		i = 0;
-
-		if (haystack[i] == needle[i])
+		if (*haystack == *needle)
 		{
-			do {
-				if (needle[i + 1] == '\0')
-					return (haystack);
-
-				i++;
-
-			} while (haystack[i] == needle[i]);
+			occurance = haystack;
+			tempNeedle = needle;
+			while (*tempNeedle)
+			{
+				if (*haystack++ != *tempNeedle++)
+				{
+					haystack = occurance;
+					break;
+				}
+			}
+			if (occurance != haystack)
+				return (occurance);
 		}
-
 		haystack++;
 	}
-
 	return ('\0');
 }

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strpn - gets length of substring
+ * _strspn - gets length of substring
  * @s : source
  * @accept : a substring of characters
  *

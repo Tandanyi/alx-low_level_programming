@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strstr : finds a substring
+ * _strstr - finds a substring
  * @haystack : source
  * @needle : occurence of string in source
  *
- * Returns: pointer haystack if string is found
+ * Return: pointer haystack if string is found
  *	null if not found
  */
 char *_strstr(char *haystack, char *needle)

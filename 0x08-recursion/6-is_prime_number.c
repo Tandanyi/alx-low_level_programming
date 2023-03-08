@@ -29,11 +29,11 @@ int prime(int n, int i)
 
 int is_prime_number(int n)
 {
-	if(n == 0)
+	if (n == 0)
 		return (0);
 	if (n < 0)
 		return (0);
 	if (n == 1)
 		return (0);
-	return(prime(n, 2));
+	return (prime(n, 2));
 }

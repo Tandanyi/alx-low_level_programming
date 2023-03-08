@@ -7,9 +7,9 @@
  * Return: i
  */
 
-int nat_root(int n, int i);
+int nat_root(unsigned int n, unsigned int i);
 
-int nat_root(int n, int i)
+int nat_root(unsigned int n, unsigned int i)
 {
 	if (n / i == i)
 		return (i);

@@ -13,7 +13,7 @@ int prime(int n, int i)
 {
 	if (n % c == 0)
 	{
-		if (n == c)
+		if (n == i)
 			return (1);
 		return (0);
 	}
@@ -35,5 +35,5 @@ int is_prime_number(int n)
 		return (0);
 	if (n == 1)
 		return (0);
-	return(is_prime(n, 2));
+	return(prime(n, 2));
 }

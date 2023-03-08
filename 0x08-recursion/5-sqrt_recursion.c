@@ -14,8 +14,8 @@ int nat_root(int n, int i)
 		return (i);
 	if (i == 0)
 		return (-1);
-	return (nat_root(n, i--));
-}		
+	return (nat_root(n, i - 1));
+}
 /**
  * _sqrt_recursion - finds square root of a number
  * @n : number
@@ -25,12 +25,14 @@ int nat_root(int n, int i)
 
 int _sqrt_recursion(int n)
 {
-	int i = n / 2 ;
+	int i = n / 2;
+	if(n == 1)
+		return (1);
 
 	/*remove -tve numbers*/
 	if (n < 0)
 		return (-1);
-	return (nat_root(n,i));
+	return (nat_root(n, i));
 		
 
 }

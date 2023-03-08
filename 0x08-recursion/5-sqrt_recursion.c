@@ -7,9 +7,9 @@
  * Return: i
  */
 
-int nat_root(int n, int i);
+int nat_root(int n,long int i);
 
-int nat_root(int n, int i)
+int nat_root(int n,long int i)
 {
 	if (n / i == i)
 		return (i);
@@ -27,7 +27,7 @@ int nat_root(int n, int i)
 
 int _sqrt_recursion(int n)
 {
-	int i = n / 2;
+	long int i = n / 2;
 	
 	if (n == 1)
 		return (1);

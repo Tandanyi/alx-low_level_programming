@@ -2,12 +2,12 @@
 
 /**
  * _puts_recursion - prints a string followed by new line
- * @s - string literal
- * 
+ * @s : string literal
+ *
  * return: void
  */
 
-void _puts_recursion( char *s)
+void _puts_recursion(char *s)
 {
 	if (*s == '\0')
 	{

@@ -27,7 +27,7 @@ int nat_root(unsigned int n, unsigned int i)
 
 int _sqrt_recursion(int n)
 {
-	int i = n / 2;
+	int i = n;
 
 	if (n == 1)
 		return (1);

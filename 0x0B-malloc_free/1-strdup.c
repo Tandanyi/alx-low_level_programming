@@ -6,9 +6,9 @@
  * _strdup - returns a copy of a string to a new mem space
  * @str: string
  *
- * return: null if str is null
- * 	: pointer to copy of str
- * 	: null if insufficient memory avalable
+ * Return: null if str is null
+ *: pointer to copy of str
+ *: null if insufficient memory avalable
  */
 
 char *_strdup(char *str)
@@ -19,7 +19,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	b = strlen(str);
+	b = strlen(str) + 1;
 	newstr = (char *)malloc(b * sizeof(char));
 	if (newstr != NULL)
 	{

@@ -24,13 +24,13 @@ char *str_concat(char *s1, char *s2)
 	else if(s1 == NULL && s2 == NULL)
 		return (NULL);
 	else
-		for (n = 0; n < size; n++)
+	{
+		while (n = 0, s1[n] != '\0')
 		{
-			while (s1[n] != '\0')
-			{
-				newstr[n] = s1[n];
-				n++;
-			}
+			newstr[n] = s1[n];
+			n++;
+		}
+		for (; n < size; n++)
 			newstr[n] = s2[n];
 		}
 	return (newstr);

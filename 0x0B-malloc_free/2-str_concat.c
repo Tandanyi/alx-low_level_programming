@@ -25,7 +25,12 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	else
 		for (n = 0; n < size; n++)
-			newstr[n] = *s1 + *s2;
+			while (s1[n] != '\0')
+			{
+				newstr[n] = s1[n];
+				n++;
+			}
+			newstr[n] = s2[n];
 	return (newstr);
 
 }

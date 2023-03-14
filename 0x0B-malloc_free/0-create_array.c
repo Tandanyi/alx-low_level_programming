@@ -21,7 +21,6 @@ char *create_array(unsigned int size, char c)
 	str = malloc(sizeof(char) * size);
 	if (*str == '\0')
 	{
-		free(str);
 		return ('\0');
 	}
 	for (n = 0; n <= size; n++)
@@ -29,5 +28,4 @@ char *create_array(unsigned int size, char c)
 		str[n] = c;
 	}
 		return (str);
-	free(str);
 }

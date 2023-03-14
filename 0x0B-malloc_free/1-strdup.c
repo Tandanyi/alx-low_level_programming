@@ -6,4 +6,29 @@
  * @str: string
  *
  * return: null if str is null
- * 	: str
+ * 	: pointer to copy of str
+ * 	: null if insufficient memory avalable
+ */
+
+char *_strdup(char *str)
+{
+	char *newstr = NULL;
+	unsigned int a;
+	int b;
+
+	if (str == NULL)
+		return (NULL);
+	b = strlen(str);
+	newstr = (char *)malloc(b * sizeof(char));
+	if (strnew != NULL)
+	{
+		for (a = 0; str[a] != '\0'; a++)
+			newstr[a] = str;
+	}
+	else
+	{
+		return (NULL);
+	}
+	newstr[a] = '\0';
+	return (newstr);
+}

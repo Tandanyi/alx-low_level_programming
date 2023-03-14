@@ -14,8 +14,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *newstr;
-	int n;
-	int size;
+	int i, j, k;
+	int limit, size;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -41,7 +41,8 @@ char *str_concat(char *s1, char *s2)
 
 	limit = j;
 	for (j = 0; j <= limit; k++, j++)
-		newstr[k] = s2[j];eturn (newstr);
+		newstr[k] = s2[j];
+	return (newstr);
 
 }
 

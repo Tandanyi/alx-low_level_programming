@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - returns a copy of a string to a new mem space
@@ -23,7 +24,7 @@ char *_strdup(char *str)
 	if (newstr != NULL)
 	{
 		for (a = 0; str[a] != '\0'; a++)
-			newstr[a] = str;
+			newstr[a] = str[a];
 	}
 	else
 	{

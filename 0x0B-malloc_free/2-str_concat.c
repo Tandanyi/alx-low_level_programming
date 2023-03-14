@@ -4,8 +4,8 @@
 
 /**
  * str_concat - combines twostrings in new mem space
- * @s1 - first string
- * @s2 - second string
+ * @s1 : first string
+ * @s2 : second string
  *
  * Return: pointer to new memspace is successfull
  * null if empty or failure

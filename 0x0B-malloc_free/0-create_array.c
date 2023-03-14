@@ -1,4 +1,4 @@
-#include "main.h'"
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -20,10 +20,10 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		char *str = malloc (sizeof(char) * size);
+		char *str = malloc(sizeof(char) * size);
 		for(n = 0; n <= size; n++;)
 		{
-			*str[n] = c[n];
+			*str[n] = c;
 		}
 		return (str);
 	}

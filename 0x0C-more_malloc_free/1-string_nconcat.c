@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-
+#include <stddef.h>
+#include <stdio.h>
 /**
  * string_nconcat - concatenates string s1 with nth of s2
  * @s1: string 1

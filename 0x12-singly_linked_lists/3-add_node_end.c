@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * add_node_end - adds lists to the end 
+ * add_node_end - adds lists to the end
  * @head : start of list
  * @str : list
  *

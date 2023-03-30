@@ -4,9 +4,9 @@
 #include <stdio.h>
 
 /**
- * add node- adds a list tothe beginning of list
- * @head - start of list
- * @str - new list
+ * add_node- adds a list tothe beginning of list
+ * @head : start of list
+ * @str : new list
  *
  * Return: null if failed
  * new element
@@ -34,12 +34,12 @@ list_t *add_node(list_t **head, const char *str)
 		free(temp);
 		return (NULL);
 	}
-	
+
 	temp->str = dup;
 	temp->next = *head;
 	temp->len = len + 1;
-	
+
 	*head = temp;
 
-	return(temp);
+	return (temp);
 }

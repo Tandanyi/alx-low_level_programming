@@ -23,7 +23,7 @@ size_t print_listint_safe(const listint_t *head)
 		exit(98);
 	while (pointer)
 	{
-		printf("%d\n", pointer->n);
+		printf("[%p] %d\n",(void *)&(pointer->n), pointer->n);
 		/*if pointer was already printed*/
 		if (hash_table[hash_index] == pointer)
 			break;

@@ -1,37 +1,43 @@
-#include <string.h>
 #include "lists.h"
+#include <stdint.h>
 
 /**
- * print_listint_safe - prints a linked list, even with a loop
- * @head: pointer to the head of the list
- * Return: number of nodes in the list
+ * print_listin_safe- prints a linked list
+ * @head: pointer to start of the list
+ *
+ * Return: number of nodes
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow, *fast;
-	size_t count = 0;
+	listint_t *pointer = (listint_t *)head;
+	int count = 0;
+	int hash_table_size = 1024;
+	listint_t **table = calloc(hash_table_size, sizeof(listint_t *));
+	int index = ((uintptr_t)pointer) % hash_table_size;
 
-	slow = head;
-	fast = head;
-	while (slow != NULL && fast != NULL && fast->next != NULL)
+	if (!table)
+		exit(98);
+
+	if (!pointer)
+		exit(98);
+	while (pointer)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-		if (slow == fast)
-		{
-			exit(98);
-		}
-		printf("[%p] %d\n", (void *)slow, slow->n);
+		printf("[%p] %d\n",(void *)&(pointer->n), pointer->n);
+
+		/*if pointer was already printed*/
+		if (table[index] == pointer)
+			break;
+		if (pointer->visited)
+			break;
+
+		table[index] = pointer;
+		pointer->visited = 1;
+
+		pointer = pointer->next;
 		count++;
 	}
-	while (head != slow)
-	{
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-		count++;
-	}
-	printf("[%p] %d\n", (void *)head, head->n);
-	count++;
+
+	free(table);
 	return (count);
 }
-

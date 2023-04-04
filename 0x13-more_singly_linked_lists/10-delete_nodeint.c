@@ -15,7 +15,7 @@ int tester(unsigned int index, listint_t *head)
 	unsigned int count = 0;
 	listint_t *tester;
 
-	tester = *head;
+	tester = head;
 	while (tester)
 	{
 		tester = tester->next;
@@ -40,13 +40,13 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = 0;
 	listint_t *temp, *before;
+	int check = tester(index, *head);
 
 	if (!head || !*head)
 		return (-1);
 	/*check if index is more than list count*/
-	int tester = tester(index, *head);
 
-	if (tester == 1)
+	if (check == 1)
 		return (-1);
 
 	/*when index is 0*/

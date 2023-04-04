@@ -11,16 +11,26 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = 0;
-	listint_t *temp;
+	listint_t *temp, *before, *tester;
+	unsigned int count = 0;
 
 	if (!head || !*head)
 		return (-1);
-	
+	/*check if index is more than list count*/
+	tester= *head;
+	while(tester)
+	{
+		tester = tester->next;
+		count++;
+	}
+	if (count < index)
+		return (-1);
+
 	/*when index is 0*/
 	if (index == 0)
 	{
 		temp = *head;
-		*head = (*head)->next;
+		*head = (*head) ->next;
 		free(temp);
 		return (1);
 	}
@@ -30,11 +40,20 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		*head = (*head)->next;
 		i++;
-	}
-	if (!head || !(*head)->next)
+		}
+
+	/*checks for null pointer*/
+	if (!head && !(*head)->next)
 		return(-1);
-	temp = (*head)->next;
-	*head = (*head)->next;
+
+	/*assigns pointer to previous list to the next one*/
+	before = *head; /*set pointer before to previous node*/
+
+	temp =before->next;/*set temp to nth node*/
+
+	before->next = temp->next;/*set next pointer of before to next pointer of temp*/
+
+
 	free(temp);
 	return(1);
 }

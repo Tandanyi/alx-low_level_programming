@@ -2,7 +2,7 @@
 #include <stdint.h>
 
 /**
- * print_listin_safe- prints a linked list
+ * print_listint_safe- prints a linked list
  * @head: pointer to start of the list
  *
  * Return: number of nodes
@@ -23,7 +23,7 @@ size_t print_listint_safe(const listint_t *head)
 		exit(98);
 	while (pointer)
 	{
-		printf("[%p] %d\n",(void *)&(pointer->n), pointer->n);
+		printf("[%p] %d\n", (void *)&(pointer->n), pointer->n);
 
 		/*if pointer was already printed*/
 		if (table[index] == pointer)

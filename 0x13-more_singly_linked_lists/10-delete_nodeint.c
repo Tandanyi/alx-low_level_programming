@@ -66,10 +66,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			return (-1);
 	}
 
-	/*checks for null pointer
-	if (!head && !(*head)->next)
-		return (-1);*/
-
 	/*assigns pointer to previous list to the next one*/
 	temp = before->next;/*set temp to nth node*/
 	before->next = temp->next;/*set pointer to next pointer of temp*/

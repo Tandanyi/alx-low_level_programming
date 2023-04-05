@@ -1,20 +1,16 @@
 #include "lists.h"
-
 /**
- * tester - ckecks if index given is more than list count
+ * tester - checks if index given is more than list count
  * @index: index given
  * @head: start of list
  *
  * Return: 0 if less
  * 1 if more
  */
-
-int tester(unsigned int index, listint_t *head);
 int tester(unsigned int index, listint_t *head)
 {
 	unsigned int count = 0;
 	listint_t *tester;
-
 	tester = head;
 	while (tester)
 	{
@@ -26,29 +22,21 @@ int tester(unsigned int index, listint_t *head)
 	else
 		return (0);
 }
-
 /**
- * delete_nodeint_at_index - deletes at given index
- * @head : pointer to start of node
- * @index: wherenode should be deleted
+ * delete_nodeint_at_index - deletes node at given index
+ * @head: pointer to pointer to start of list
+ * @index: index of node to delete
  *
- * Return: 1 if success
- * -1 if failure
+ * Return: 1 if success, -1 if failure
  */
-
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int i = 0;
+	unsigned int i;
 	listint_t *temp, *before;
-
-	if (!head || !*head)
+	if (head == NULL || *head == NULL)
 		return (-1);
-	/*check if index is more than list count*/
-
 	if (tester(index, *head) == 1)
 		return (-1);
-
-	/*when index is 0*/
 	if (index == 0)
 	{
 		temp = *head;
@@ -56,8 +44,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(temp);
 		return (1);
 	}
-
-	/*set pointer to index*/
 	before = *head;
 	for (i = 0; i < index - 1; i++)
 	{
@@ -65,15 +51,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (before == NULL)
 			return (-1);
 	}
-
-	/*checks for null pointer
-	if (!head && !(*head)->next)
-		return (-1);*/
-
-	/*assigns pointer to previous list to the next one*/
-	temp = before->next;/*set temp to nth node*/
-	before->next = temp->next;/*set pointer to next pointer of temp*/
-
+	temp = before->next;
+	before->next = temp->next;
 	free(temp);
 	return (1);
 }

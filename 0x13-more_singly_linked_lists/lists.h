@@ -7,10 +7,14 @@
  * struct listint_s - singly linked list
  * @n: integer
  * @next: points to the next node
+ * @visited: checks for loops
  * Description: singly linked list node structure
  */
 typedef struct listint_s
 {
+#ifdef FLAG
+	int visited;
+#endif
 	int n;
 	struct listint_s *next;
 } listint_t;

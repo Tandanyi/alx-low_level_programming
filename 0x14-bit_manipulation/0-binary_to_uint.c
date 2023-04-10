@@ -11,7 +11,7 @@ unsigned int power(unsigned int x, int y)
 {
 	if (y == 0)
 		return (1);
-	x = x * power(x, y-1);
+	x = x * power(x, y - 1);
 	return (x);
 }
 
@@ -44,5 +44,5 @@ unsigned int binary_to_uint(const char *b)
 			base10 = base10 + power(2, i);
 		i--;
 	}
-	return base10;
+	return (base10);
 }

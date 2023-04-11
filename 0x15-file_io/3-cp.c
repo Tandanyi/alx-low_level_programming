@@ -36,13 +36,15 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	/*copy file*/
+	while(r)
+	{
 		w = write(f_out, buffer, r);
 		if (f_out == -1 || w == -1 || w != r)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(98);
 		}
-	
+	}
 	/*close files*/
 	c_in = close(f_in);
 	c_out = close(f_out);

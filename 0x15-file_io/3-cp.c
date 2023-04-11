@@ -36,15 +36,12 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	/*copy file*/
-	while (r > 0)
-	{	
 		w = write(f_out, buffer, r);
 		if (f_out == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[3]);
 			exit(98);
 		}
-	}
 	
 	/*close files*/
 	c_in = close(f_in);

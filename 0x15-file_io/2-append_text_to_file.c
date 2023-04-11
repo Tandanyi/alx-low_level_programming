@@ -17,14 +17,14 @@ int append_text_to_file(const char *filename, char *text_content)
 	/*check if file is present*/
 	if (!filename)
 		return (-1);
-	
+
 	/*open file*/
 	o = open(filename, O_RDWR | O_APPEND);
-	
+
 	/*write file*/
 	if (text_content)
 	{
-		while(text_content[len])
+		while (text_content[len])
 			len++;
 	}
 
@@ -35,5 +35,5 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	close(o);
 
-	return(1);
+	return (1);
 }

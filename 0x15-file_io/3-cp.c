@@ -25,13 +25,13 @@ int main(int argc, char *argv[])
 
 	/*open files*/
 	f_in = open(argv[1], O_RDONLY);
-	f_out = open(argv[2], O_WRONLY | O_TRUNC, 0664);
 
 	if (f_in == -1 )
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(99);
+		exit(98);
 	}
+	f_out = open(argv[2], O_WRONLY | O_TRUNC, 0664);
 	/*copy file*/
 	while((r = read(f_in, buffer, SIZE)) > 0)
 	{
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		if (f_out == -1 || w == -1 || w != r)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(98);
+			exit(99);
 		}
 	}
 	/*close files*/

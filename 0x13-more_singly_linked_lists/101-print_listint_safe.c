@@ -13,15 +13,14 @@ size_t print_listint_safe(const listint_t *head)
 {
 	listint_t *pointer = (listint_t *)head;
 	int count = 0;
-	int index = ((uintptr_t)pointer) % hash_table_size;
 	int hash_table_size = 1024;
+	int index = ((uintptr_t)pointer) % hash_table_size;
 	listint_t **table = NULL;
 		
 	table = calloc(hash_table_size, sizeof(listint_t *));
 
 	if (!table)
 		exit(98);
-
 	if (!pointer)
 		exit(98);
 	while (pointer)

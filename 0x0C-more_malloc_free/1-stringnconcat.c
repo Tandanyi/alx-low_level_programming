@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
 
 /**
  * array_range - ...
